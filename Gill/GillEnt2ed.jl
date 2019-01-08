@@ -2,8 +2,7 @@
 # GillEnt2.jl
 # A script to perform a Gillespie simulation and then calculate the entropy production
 # of the paths by direct computation of the reversed probabilities.
-# The script will then calculate steady state entropy via the Shannon method for comparison
-# This will first be done for the two species case
+# The compares with the Langevin method of calculating entropy production
 
 using Roots
 using Plots
