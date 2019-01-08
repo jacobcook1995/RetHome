@@ -208,8 +208,8 @@ function Gillespie!(stead::Array{Int64,1},K::Float64,k::Float64,Q::Float64,q::Fl
         qs[2,i] = (vars[2,i+1] - vars[2,i])/(Ω*τ)
         posA = (vars[1,i+1] + vars[1,i])/(2)
         posB = (vars[2,i+1] + vars[2,i])/(2)
-        fs[:,i] = f!(fs[:,i],[posA,posB],k,q,K,Q,r,f,kmin,qmin,Kmin,Qmin)
-        Ds[:,:,i] = D!(Ds[:,:,i],[posA,posB],k,q,K,Q,r,f,kmin,qmin,Kmin,Qmin)
+        fs[:,i] = f!(fs[:,i],[posA,posB],k,q,K,Q,r,f,kmin,qmin,Kmin,Qmin)/Ω
+        Ds[:,:,i] = D!(Ds[:,:,i],[posA,posB],k,q,K,Q,r,f,kmin,qmin,Kmin,Qmin)/Ω
         Ds[:,:,i] = Ds[:,:,i]/τ # applies here as we need a τ in each expression, D will be inverted later
         # final reverse rate
         if i == noits
