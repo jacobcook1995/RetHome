@@ -8,5 +8,5 @@ The devisions in this repository are as follows:
 3) DiffEq: a sub repository to store scripts that run ODE or SDE implementations of the 2 or 4 species gene switch.
 4) Gill: a sub repository to store various gillespie simulations of the 2 and 4 species gene switch.
 5) MAP: a sub repository to store old scripts that use the Minimum action path (MAP) method or the geometric MAP method. Some of these scripts run full simulations and some just perform small parts.
-6) Stead: a sub repository with scripts relating to finding steady states
-7) 
+6) Stead: a sub repository with scripts relating to finding steady states.
+7) Hist: a sub repository with scripts that make potentially useful histograms.
